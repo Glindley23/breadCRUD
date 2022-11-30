@@ -4,7 +4,9 @@ const Bread = require('../models/bread')
 
 //GET: All the bread
 router.get('/', (req, res) => {
-    res.send(Bread)
+    res.render('index', {
+        breads: Bread
+    })
 })
 //GET: Bread by index
 router.get('/:index', (req, res) => {
