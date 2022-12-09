@@ -5,12 +5,17 @@ function Index ({ breads }) {
     return (
       <Default>
         <h2>Index Page</h2>
+        <div className='newButton'>
+            <a href='/breads/new'>
+                <button>Add New Bread</button>
+            </a>
+        </div>
         <ul>
             {
-                breads.map((bread, i) => {
+                breads.map((bread) => {
                     return (
-                        <li key={i}>
-                           <a href={`/breads/${i}`}>{bread.name} </a>
+                        <li key={bread._id}>
+                           <a href={`/breads/${bread._id}`}>{bread.name} </a>
                         </li>
                     )
                     
